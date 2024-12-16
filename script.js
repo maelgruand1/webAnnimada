@@ -1,30 +1,17 @@
-const elements = {
-    section : document.getElementById("description"),
-    btnAccess : document.getElementById("access"),
-    hidden : "hidden",
+const elements = { 
+    section: document.getElementById("description"),
+    btnAccess: document.getElementById("access"),
+    hidden: "hidden",
 };
-function seeSection(){
-    if(elements.btnAccess.addEventListener("click")){
-        elements.section.classList.remove(elements.hidden);
-    }
-    else{
-        elements.section.classList.add(elements.hidden);
-    }
-}
-function hideSection(){
-    if(elements.btnAccess.addEventListener("click")){
-        elements.section.classList.add(elements.hidden);
-    }
-    else{
-        elements.section.classList.remove(elements.hidden)
-    }
-}
-function action(){
-    if (elements.btnAccess.addEventListener("click")){
-        seeSection();
 
-    }
-    else{
-        hideSection();
+// Fonction pour basculer la visibilité de la section
+function toggleSection() {
+    if (elements.section.classList.contains(elements.hidden)) {
+        elements.section.classList.remove(elements.hidden); // Afficher
+    } else {
+        elements.section.classList.add(elements.hidden); // Cacher
     }
 }
+
+// Ajouter un gestionnaire d'événement au bouton
+elements.btnAccess.addEventListener("click", toggleSection);
