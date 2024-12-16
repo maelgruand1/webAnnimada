@@ -15,8 +15,7 @@ header h1{
     color: white;
     text-decoration: underline;
 }
-.hidden{diplay:none;}
-
+.hidden{display: none;}
 /* El estillo de la descripción */
 section{
     border: solid, 0px;
