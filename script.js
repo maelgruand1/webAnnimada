@@ -12,6 +12,3 @@ function toggleSection() {
         elements.section.classList.add(elements.hidden); // Cacher
     }
 }
-
-// Ajouter un gestionnaire d'événement au bouton
-elements.btnAccess.addEventListener("click", toggleSection);
